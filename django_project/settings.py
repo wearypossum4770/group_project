@@ -11,11 +11,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku
 
-
+CSRF_TRUSTED_ORIGINS = ['http://localhost','127.0.0.1','http://localhost:3000','127.0.0.1:3000']
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,7 +26,7 @@ SECRET_KEY = '9$tfgzgbxbr_b%e^2+txd98!_^0i&4^+ai33v2ey@(7s%4-r!s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['http://localhost','127.0.0.1']
 
 
 # Application definition
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     ######### MY APPS ##########
     'corsheaders',
     'rest_framework',
-    'django_restframework',
+    # 'django_restframework',
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'user_chats.apps.UserChatsConfig',
@@ -160,6 +160,8 @@ MEDIA_URL = '/media/'
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+django_heroku.settings(locals())
 # ###Instead of sending out real emails the console backend just writes the emails that would be sent to the standard output.###
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
