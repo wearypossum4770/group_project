@@ -32,7 +32,7 @@ const {handleSubmit, handleChange, /**userObject, registrationObject*/} = this.p
                 <input className="form-control" type="password" name="password_confirmation" onChange={handleChange} placeholder="Confirm Password" />
             </div>
             <div className="form-group">
-                <label htmlFor="mobile_number" >Mobile Number:</label>
+                <label htmlFor="mobile_number" >Mobile(text message):</label>
                 <input className="form-control" type="tel" name="mobile_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onChange={handleChange} placeholder="800-222-2221" />
             </div>
             <button type="submit">Submit</button>

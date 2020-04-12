@@ -1,17 +1,23 @@
-import React from 'react';
-/**import LoginForm from './components/LoginForm'
-import SignupForm from './components/SignupForm'
-import MonthlyTimeSheet from './components/UserForms/MonthlyTimeSheet'
-*/
-import UserAuthentication from './components/UserAuthentication'
-//import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import {LandingPage} from './pages/LandingPage'
+import {Signup} from './pages/Signup'
+import {Login} from './pages/Login'
+import Dashboard from './pages/Dashboard'
 class App extends React.Component {
-  render() {
+  
+  render(props) {
     return (
       <div>
-        <UserAuthentication/>
-      </div>
+		<Router>
+				<Switch>
+					<Route exact path='/account' component ={Dashboard}/>
+					<Route exact path = '/signup' component={Signup}/>
+					<Route exact path ={['/login','/logout']} component={LoginLogout}/>
+					<Route exact path ='/' component = {LandingPage}/>
+				</Switch>
+			</Router>
+		</div>
     )
   }
 }

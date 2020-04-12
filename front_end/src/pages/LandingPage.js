@@ -1,14 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
+
+let isLoggedIn = true
+export const LandingPage = (props) =>  {
+
+let navigateTo = props.history.replace
+return (
+
+<div>
+
+<div>LANDING PAGE</div>
+	
 
 
-export default class LandingPage extends Component {
 
 
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
-}
+
+
+
+</div>
+)}
+
