@@ -122,11 +122,7 @@ class MonthlyTimeSheet extends React.Component {
                         <label className="form-group" htmlFor="instructor_signature">APPRENTICE INSTRUCTOR<input type="text" /></label>
                         <label className="form-group" htmlFor="days_absent">DAYS ABSENT<input type="number" name="days_absent" /></label>
                         <label className="form-group" htmlFor="exam_grade">WRITTEN EXAM GRADE<input type="number" name="exam_grade"/></label>
-                    
-                    
-                    </div>
-
-
+                     </div>
                 </form>
             </div>
         )
