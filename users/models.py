@@ -6,9 +6,13 @@ from django.db.models import (
     ImageField,
     CharField,
     TextChoices,
+    ForeignKey,
 
 )
 from django.contrib.auth.models import User
+from rest_framework_api_key.models import AbstractAPIKey
+from rest_framework_api_key.crypto import KeyGenerator
+from rest_framework_role_filters.role_filters import RoleFilter
 # SIGNAL IMPORTS
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -44,3 +48,8 @@ class Profile(Model):
             img_to_resize.thumbnail(output_size)
             img_to_resize.save(self.image.path)
 
+# class OrganizationAPIKeyManager(BaseAPIKeyManager):
+#     key_generator = KeyGenerator(prefix_length=8, secret_key_length=32)
+
+# class ProfileAPIKey(AbstractAPIKey):
+#     profile = ForeignKey(Profile, on_delete = CASCADE, related_name='api_keys')

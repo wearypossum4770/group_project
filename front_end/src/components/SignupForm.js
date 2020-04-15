@@ -1,10 +1,14 @@
-import React from 'react'
-
+import React, {useContext} from 'react'
+// import UserContextProvider from '../components/UserContext'
 const SignupForm = (props) => {
-const {handleSubmit, handleChange, /**userObject, registrationObject*/} = this.props
+// const {handleSubmit,handleChange} = useContext(UserContextProvider)
+const handleChange = e =>{
+    console.log(e.target.value)
+}
+const handleSubmit = e => e.preventDefault()
+    // const {handleSubmit, handleChange, /**userObject, registrationObject*/} = this.props
 
     return (
-
     <div className="container-sm">
         <form method="post" autoComplete="false" onSubmit={handleSubmit}>
             <div className="form-group">
@@ -38,7 +42,6 @@ const {handleSubmit, handleChange, /**userObject, registrationObject*/} = this.p
             <button type="submit">Submit</button>
         </form>
     </div>
-
 )}
 // class SignupForm extends React.Component {
 //     render(props) {

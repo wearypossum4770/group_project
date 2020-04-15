@@ -16,7 +16,11 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
-
+from rest_framework_jwt.views import (
+    obtain_jwt_token,
+    refresh_jwt_token,
+    verify_jwt_token,
+    )
 from users.views import profile, register
 
 
@@ -40,12 +44,16 @@ urlpatterns = [
     path('password-reset-confirm/<uidb64>/<token>/',PasswordResetConfirmView.as_view(
              template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
     ######## REST PATHWAYS #######
-    path('api/blog', include('blog.api.urls'), name='blog-api'),
-    ######## JWT REST PATHWAYS #######
+    path('api/blog/', include('blog.api.urls'), name='blog-api'),
+    path('api/user/', include('users.api.urls'), name='user-api'),
+    ######## SIMPLE JWT REST PATHWAYS #######
     path('api/token/',TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     # path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
-
+    ######## JWT REST PATHWAYS #######
+    path('api-token-auth/', obtain_jwt_token),
+    path('api-token-refresh/', refresh_jwt_token),
+    path('api-token-verify/', verify_jwt_token),
 ]
 
 

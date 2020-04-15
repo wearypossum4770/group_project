@@ -1,28 +1,34 @@
-from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.generics import (
     ListAPIView,
-
+    CreateAPIView,
+    UpdateAPIView,
+    RetrieveAPIView,    
+    UpdateAPIView,
     )
-from rest_framework.response import Response
-from rest_framework.decorators import api_view
 from blog.models import Post
-from users.models import Profile 
-from .serializers import PostSerializer
+from .serializers import (
+    PostUpdateSerializer,
+    PostCreateSerailizer,
+    PostListSerializer,
+    PostDetailSerializer,
+)
 
+class PostCreateAPIView(CreateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostCreateSerailizer
 
-# @api_view(['GET',])
-# def api_detail_post_view(request, slug):
-#     post= Post.objects.get(slug=slug)
-#     serializer = PostSerializer(post)
-#     return Response(serializer.data)
-    # try:
-    #     post= Post.objects.get(slug=slug)
-    #     serializer = PostSerializer(post)
-    #     return Response(serializer.data)
-    # except Post.DoesNotExists:
-    #     return Response(status.HTTP_404_NOT_FOUND)
-    
+class PostDetailAPIView(RetrieveAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostDetailSerializer
+
 class PostListAPIView(ListAPIView):
     queryset = Post.objects.all()
-    serializer = PostSerializer()
+    serializer_class = PostListSerializer
     
+class PostUpdateAPIView(UpdateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostUpdateSerializer
+
+class PostDeleteAPIView():
+    queryset=Post.objects.all()
