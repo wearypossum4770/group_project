@@ -1,15 +1,24 @@
-.side-bar{
+/* .side-bar{
   float: right;
 
 }
 .main {
   display: block;
+} */
+/* 
+address {
+  display: block;
+} */
+div#profile-info{
+  max-width: 400px;
+  overflow: hidden;
+  float: left;
 
 }
-span.profile-picture>img{
-  height: 200px;
-  width: 200px;
-  
+div#menu-options{
+  max-width: 400px;
+  overflow: hidden;
+float:right;
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* @media only screen and (min-width: 600px) {} */

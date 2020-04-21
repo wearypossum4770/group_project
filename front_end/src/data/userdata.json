@@ -1,0 +1,66 @@
+
+  {"results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Clyde",
+        "last": "Neal"
+      },
+      "location": {
+        "street": {
+          "number": 6803,
+          "name": "W Dallas St"
+        },
+        "city": "Abilene",
+        "state": "Pennsylvania",
+        "country": "United States",
+        "postcode": 84478,
+        "coordinates": {
+          "latitude": "88.3771",
+          "longitude": "-35.3146"
+        },
+        "timezone": {
+          "offset": "-4:00",
+          "description": "Atlantic Time (Canada), Caracas, La Paz"
+        }
+      },
+      "email": "clyde.neal@example.com",
+      "login": {
+        "uuid": "3a4ae0bd-7de3-4b1f-8d1b-b878ffa168cc",
+        "username": "bigpanda741",
+        "password": "someone",
+        "salt": "C23nRg0b",
+        "md5": "366f44316f327578623756a9ac788fcd",
+        "sha1": "508268a904cd3683ec1352199b91e0165155b6c7",
+        "sha256": "0c1cdc674d54ff44cb9a728393479a158d8bd4165d1d2a22d16666da31520e39"
+      },
+      "dob": {
+        "date": "1973-11-10T23:36:59.262Z",
+        "age": 47
+      },
+      "registered": {
+        "date": "2010-12-10T02:18:40.653Z",
+        "age": 10
+      },
+      "phone": "(996)-145-7830",
+      "cell": "(984)-107-1306",
+      "id": {
+        "name": "SSN",
+        "value": "628-36-1004"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/50.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/50.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/50.jpg"
+      },
+      "nat": "US"
+    }
+  ],
+  "info": {
+    "seed": "81a6572e07cb896f",
+    "results": 1,
+    "page": 1,
+    "version": "1.3"
+  }
+}

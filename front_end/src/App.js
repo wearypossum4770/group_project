@@ -1,12 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import {Provider} from 'react-redux'
-import store from './redux-items/store/store'
-// import applicationStore from './redux_items/store/store'
-import './App.css'
+import './App.css' 
 import Authentication from './components/Authentication'
-// import UserContextProvider from './components/UserContext'
-import ProtectedRoutes from './components/ProtectedRoutes'
+// import ProtectedRoutes from './components/ProtectedRoutes'
 import AppNav from './components/AppNav'
 import LandingPage from './pages/LandingPage'
 import MyMessages from './pages/MyMessages'
@@ -15,49 +11,44 @@ import Signup from './pages/Signup'
 import LoginLogoutPage from './pages/LoginLogoutPage'
 import Dashboard from './pages/Dashboard'
 import BlogPosts from './pages/BlogPosts'
+import Profile from './pages/Profile'
+import FAQPage from './pages/FAQPage'
+import {MonthlyTimeSheet,WeeklyTimeSheet} from './userforms/TimeSheets'
 
+import GetData from './components/UserContext'
 class App extends React.Component {
-constructor(props){
-	super(props)
-
-this.handleSubmit = this.handleSubmit.bind(this)
-this.handleChange = this.handleChange.bind(this)
-}
-
-handleChange = e => console.log(e.target.value)
-handleSubmit = e => e.preventDefault()
-
 	render() {
+		const MyContext = React.createContext();
 		return (
 			<div>
 				<AppNav />
-				<Provider store={store}>
 				<Router>
 					<Switch>
-						<Route exact path ="/posts" component={BlogPosts} />
-							<Route path="/authenticate" component = {Authentication}/>
-							<ProtectedRoutes exact
-								path='/account'
-								component={Dashboard} />
-							<ProtectedRoutes exact
-								path="/messages"
-								component={MyMessages} />
-							<ProtectedRoutes exact
-								path="/mydocs"
-								component={MyDocs} />
-							<Route exact
-								path='/signup'
-								component ={Signup}/>
-							<Route exact
-								path={['/login', '/logout']}
-								component={LoginLogoutPage} />
-							<Route exact
-								path='/'
-								component={LandingPage} />
-					
+						{/* <MyContext.Provider value ={UserContext}> */}
+							<Route exact path="/posts" component={BlogPosts} />
+							<Route exact path='/home' component={LandingPage} />
+							<Route path="/authenticate" component={Authentication} />
+							{/* <ProtectedRoutes exact
+									path='/account'
+									component={Dashboard} />
+								<ProtectedRoutes exact
+									path="/messages"
+									component={MyMessages} />
+								<ProtectedRoutes exact
+									path="/mydocs"
+									component={MyDocs} /> */}
+							<Route path='/faq' component={FAQPage} />
+							<Route exact path='/dashboard' component={Dashboard} />
+							<Route exact path='messages' component={MyMessages} />
+							<Route exact path='/profile' component={Profile} />
+							<Route exact path='/mydocs' component={MyDocs} />
+							<Route exact path ='/monthly' component={MonthlyTimeSheet}/>
+							<Route exact path = '/weekly' component={WeeklyTimeSheet}/>
+							<Route exact path='/signup' component={Signup} />
+							<Route exact path={['/login', '/logout']} component={LoginLogoutPage} />
+						{/* </MyContext.Provider> */}
 					</Switch>
 				</Router>
-				</Provider>
 			</div>
 		)
 	}

@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React from 'react'
 // import UserContextProvider from '../components/UserContext'
 const LoginLogoutPage = (props) => {
 // const {isLoggedIn,handleSubmit} = useContext(UserContextProvider)

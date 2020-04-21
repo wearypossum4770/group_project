@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 // import UserContextProvider from '../components/UserContext'
 const Signup = () => {
     // const {handleSubmit} = useContext(UserContextProvider)

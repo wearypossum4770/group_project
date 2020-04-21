@@ -44,11 +44,11 @@ urlpatterns = [
     path('password-reset-confirm/<uidb64>/<token>/',PasswordResetConfirmView.as_view(
              template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
     ######## REST PATHWAYS #######
-    path('api/blog/', include('blog.api.urls'), name='blog-api'),
-    path('api/user/', include('users.api.urls'), name='user-api'),
+    path('blog-api/', include('blog.api.urls'), name='blog-api'),
+    path('', include('users.api.urls'), name='user-api'),
     ######## SIMPLE JWT REST PATHWAYS #######
-    path('api/token/',TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    # path('api/token/',TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     # path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
     ######## JWT REST PATHWAYS #######
     path('api-token-auth/', obtain_jwt_token),

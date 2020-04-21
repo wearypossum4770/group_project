@@ -27,6 +27,7 @@ const initalState = {
 
 const userReducers = (state = initalState, action) =>{
     switch (action.type) {
+        
         default:
             return state
     }
