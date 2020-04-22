@@ -1,7 +1,7 @@
 import React from 'react'
 
 const WeeklyTimeSheet = props => {
-    console.log(pros)
+    return (<h1>WEEKLY TIME SHEET</h1>)
 }
 
 export default WeeklyTimeSheet

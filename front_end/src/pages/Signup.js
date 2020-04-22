@@ -77,4 +77,4 @@ const Signup = () => {
         </div>
     )
 }
-export { Signup as default }
+export default Signup 

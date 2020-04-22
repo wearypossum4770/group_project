@@ -1,7 +1,6 @@
 {
   "name": "mine",
   "version": "0.1.0",
-  "proxy": "http://cors-anywhere.herokuapp.com/http://localhost:8000/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.11",
@@ -24,10 +23,12 @@
     "preact-cli": "^2.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-icons": "^3.9.0",
     "react-pdf": "^4.1.0",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
+    "react-select": "^3.1.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
@@ -60,6 +61,7 @@
     "pg": "^8.0.0",
     "react-alert": "^7.0.0",
     "react-alert-template-basic": "^1.0.0",
+    "react-chartjs-2": "^2.9.0",
     "react-icons": "^3.9.0"
   }
 }

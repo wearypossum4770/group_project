@@ -3,13 +3,6 @@ import React from 'react'
 const AppNav = () => {
 
     return (
-        // <div className="topnav">
-        //     <button><a href={`/`}> Home </a></button>
-        //     <button><a href={`/mydocs`}> My Documents </a></button>
-        //     <button><a href={`/account`}> My Profile </a></button>
-        //     <button><a href={`/messages`}> My Messages </a></button>
-        //     <button><a href={`/${"logout" || login_out}`}> {`${login_out}`} </a></button>
-        // </div>
         <nav className="navbar navbar-expand-md bg-dark navbar-dark">
         <a className="navbar-brand" href={`/`}>Navbar</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
