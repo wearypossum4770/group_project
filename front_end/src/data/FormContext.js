@@ -1,4 +1,4 @@
-export const BarberApprentice = new Map ([
+export const BarberApprentice = new Map([
     ['history', 10],
     ['professional image', 10],
     ['bacteriology', 10],
@@ -21,8 +21,7 @@ export const BarberApprentice = new Map ([
     ['state law', 20],
     ["total required", 2000]
 ])
-
-export const ManicuristApprentice = new Map ([
+export const ManicuristApprentice = new Map([
     ['maincuring, hand & arm massage, and treatment of nails', 440],
     ['salesmanship & shop management', 40],
     ['sanitation & sterilization', 40],
@@ -31,18 +30,9 @@ export const ManicuristApprentice = new Map ([
     ['study of the use & application of certain chemicals', 80],
     ['micellaneous lectures & test review', 160],
     ["total required", 800]
-])
 
-export const MANIAPPREN = {'maincuring, hand & arm massage, and treatment of nails':'maincuring, hand & arm massage, and treatment of nails',
-    'salesmanship & shop management':'salesmanship & shop management',
-    'sanitation & sterilization':'sanitation & sterilization',
-    'anatomy':'anatomy',
-    'state law':'state law',
-    'study of the use & application of certain chemicals':'study of the use & application of certain chemicals',
-    'micellaneous lectures & test review':'micellaneous lectures & test review'
-}
-    
-export const EstheticianApprentice = new Map ([
+])
+export const EstheticianApprentice = new Map([
     ['faicials, cleaning, toning, massaging', 240],
     ['makeup application, all phases', 200],
     ['hair removal', 60],
@@ -57,7 +47,7 @@ export const EstheticianApprentice = new Map ([
     ["total required", 1500]
 ])
 
-export const HairdressingApprentice = new Map ([
+export const HairdressingApprentice = new Map([
     ['shampooing of all kinds', 80],
     ['hair coloring, bleaches and rinses', 260],
     ['hair cutting and shaping', 260],
@@ -75,7 +65,7 @@ export const HairdressingApprentice = new Map ([
     ["total required", 3000]
 ])
 
-export const HairdressingManicureApprentice = new Map ([
+export const HairdressingManicureApprentice = new Map([
     ['shampooing of all kinds', 80],
     ['hair coloring, bleaches and rinses', 260],
     ['hair cutting and shaping', 260],
@@ -94,7 +84,7 @@ export const HairdressingManicureApprentice = new Map ([
     ["total required", 3000]
 ])
 
-export const BarbertoCosmetology = new Map ([
+export const BarbertoCosmetology = new Map([
     ["Manicuring, hand and arm massage and treatment of nails", 440],
     ["Sanitation and Sterilization", 50],
     ["Anatomy", 30],
@@ -103,7 +93,7 @@ export const BarbertoCosmetology = new Map ([
     ['total required', 1000]
 ])
 
-export const CosmetologyToBarber = new Map ([
+export const CosmetologyToBarber = new Map([
     ['history', 10],
     ['shaving', 80],
     ['total required', 90]

@@ -5,14 +5,14 @@ from django.db.models import (
     CASCADE,
     ImageField,
     CharField,
-    TextChoices,
+    #TextChoices,
     ForeignKey,
 
 )
 from django.contrib.auth.models import User
-from rest_framework_api_key.models import AbstractAPIKey
-from rest_framework_api_key.crypto import KeyGenerator
-from rest_framework_role_filters.role_filters import RoleFilter
+#from rest_framework_api_key.models import AbstractAPIKey
+#from rest_framework_api_key.crypto import KeyGenerator
+#from rest_framework_role_filters.role_filters import RoleFilter
 # SIGNAL IMPORTS
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -20,7 +20,7 @@ from django.dispatch import receiver
 
 class Profile(Model):
     """Creates a profile for a registered user.
-    The user's profile is linked to thier profile using a foreing key,
+    The user's profile is linked to thier profile using a foreign key,
     with a one-to-one relationship."""
     user = OneToOneField(User, on_delete=CASCADE)
     image = ImageField(default='default.jpg', upload_to='profile')
@@ -36,7 +36,7 @@ class Profile(Model):
 
     def __str__(self):
         """Overrides default string representation"""
-        return f"{self.user.username} Profile"
+        return self.user.username+" Profile"
     
     def save(self):
         """Overrides default image save method to resize image.

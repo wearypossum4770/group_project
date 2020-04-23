@@ -14,7 +14,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(
-                request, f"Your account has been created, you are no able to login to your account {username}")
+                request, "Your account has been created, you are no able to login to your account"+username)
             return redirect('login')
     else:
         form = UserRegisterForm()
@@ -33,7 +33,7 @@ def profile(request):
             profile_form.save(commit=True)
             user_form.save(commit=True)
             messages.success(
-                request, f"Your information has been successfully updated.")
+                request, "Your information has been successfully updated.")
             return redirect('profile')
     else:
         user_form = UserUpdateForm(instance=request.user)

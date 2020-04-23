@@ -35,7 +35,7 @@ constructor(props){
                     <div className="main">
                         <tr>
                             <td style={{width:"80%"}}>
-                                <label htmlFor="shop_name">{`NAME OF ${apprentice_type.toUpperCase()} SHOP`}<input type="text" /></label>
+                                <label htmlFor="shop_name">{`NAME OF SHOP`}<input type="text" /></label>
                             </td>
                             <td>
 
@@ -72,7 +72,7 @@ constructor(props){
                             <thead className="large-thead">
                                 <th colSpan="9"><td colSpan="9"> SUBJECT</td></th>
                                 <th colSpan="1"><td colSpan="1"> HOURS REQUIRED</td></th>
-                                <th colSpan="1"><td colSpan="1"> HOURS&nbsp;EARNED THIS&nbsp;{monthly_quarterly.toUpperCase()}</td></th>
+                                <th colSpan="1"><td colSpan="1"> HOURS&nbsp;EARNED THIS&nbsp;</td></th>
                                 <th colSpan="1"> <td colSpan="1"> TOTAL&nbsp;HOURS TO&nbsp;DATE</td></th>
 
 

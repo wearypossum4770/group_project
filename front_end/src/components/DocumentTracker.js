@@ -1,8 +1,8 @@
 import React from 'react'
 
 
-const DocumentTracker = () = > {
-	
+const DocumentTracker = () => {
+	/**
 	switch (approvalStatus){
 		case REJECTED:
 		return style = {
@@ -57,7 +57,10 @@ const DocumentTracker = () = > {
 			background:"grey"
 			}
 		}
-	}
+	*/
+	console.log("HEY")
+	
+		}
 
 // #getbold {border:"1px solid black",animation:"getbold 5s infinite"} @keyframes getbold {50%{fontWeight:"bold"}}
 // #theflash {position:"absolute", backgroundColor:"red",border:"1px solid black",animation:"theflash 5s infinite"} @keyframes theflash {50%{opacity:"0"}}

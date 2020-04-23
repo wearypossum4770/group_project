@@ -15,10 +15,9 @@ import Profile from './pages/Profile'
 import FAQPage from './pages/FAQPage'
 import {MonthlyTimeSheet,WeeklyTimeSheet} from './userforms/TimeSheets'
 
-import GetData from './components/UserContext'
 class App extends React.Component {
 	render() {
-		const MyContext = React.createContext();
+		//const MyContext = React.createContext();
 		return (
 			<div>
 				<AppNav />

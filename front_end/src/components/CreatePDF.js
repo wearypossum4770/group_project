@@ -1,8 +1,4 @@
 import React from 'react'
-import sys from 'sys'
-import fs from 'fs'
-import pdf from 'pdfjs'
-import { Courier as fontType } from 'pdfjs/font/Courier'
 const availableFonts = [
     "Courier", "Courier-Bold", "Courier-BoldOblique",
     "Courier-Oblique", "Helvetica", "Helvetica-Bold",

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css'
-const timesheetType = 'BarberApprentice' ? 'querterly':'monthly'
+//const timesheetType = 'BarberApprentice' ? 'querterly':'monthly'
 export const  MonthlyTimeSheet =props => {
 
         return (
@@ -17,7 +17,7 @@ export const WeeklyTimeSheet  = props =>{
 
 
 
-
+/***
 {/* <div className="form-div">
                 <form  >
 
@@ -95,4 +95,4 @@ export const WeeklyTimeSheet  = props =>{
 
 
                 </form>
-            </div> */}
+            </div> */

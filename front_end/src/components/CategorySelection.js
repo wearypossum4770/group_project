@@ -2,15 +2,11 @@ import React,{useContext} from 'react'
 // import UserContextProvider from './UserContext'
 
 
-class UserContext extends React.Component{
+const CategorySelection = pros => {
 	
-	render() {
-		return(<div></div>)
-		
-		
-		
-
-
-
-}}
-export default UserContext
+	return (<h1>CATEGORY SELECTION</h1>)
+	
+	} 
+	
+	
+	export default CategorySelection

@@ -22,7 +22,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 ## https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html#installation 
 import os
 from datetime import timedelta
-import django_heroku
+##import django_heroku
 
 CSRF_TRUSTED_ORIGINS = ['http://localhost','127.0.0.1','http://localhost:3000','127.0.0.1:3000']
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -53,10 +53,12 @@ INSTALLED_APPS = [
     'django_extensions',
     ######### MY APPS ##########
     'blog.apps.BlogConfig',
-    'users.apps.UsersConfig',
-    'user_chats.apps.UserChatsConfig',
-    # 'django_restframework',
+	'users.apps.UsersConfig',
+    #'user_chats.apps.UserChatsConfig',
+    'django_restframework',
     'corsheaders',
+  #  'knox',
+    'rest_auth',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_api_key',
@@ -176,7 +178,7 @@ LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
 # ###Instead of sending out real emails the console backend just writes the emails that would be sent to the standard output.###
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
@@ -190,49 +192,14 @@ REST_FRAMEWORK = {
     ),
 'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_AUTHENTICATION_CLASSES': (
+        #'knox.auth.TokenAuthentication',
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     )
 }
-############ DJANGO API REST-FRAMEWORK ############
-# JWT_AUTH = {
-#     'JWT_ENCODE_HANDLER':
-#     'rest_framework_jwt.utils.jwt_encode_handler',
-
-#     'JWT_DECODE_HANDLER':
-#     'rest_framework_jwt.utils.jwt_decode_handler',
-
-#     'JWT_PAYLOAD_HANDLER':
-#     'rest_framework_jwt.utils.jwt_payload_handler',
-
-#     'JWT_PAYLOAD_GET_USER_ID_HANDLER':
-#     'rest_framework_jwt.utils.jwt_get_user_id_from_payload_handler',
-
-#     'JWT_RESPONSE_PAYLOAD_HANDLER':
-#     'rest_framework_jwt.utils.jwt_response_payload_handler',
-
-#     'JWT_SECRET_KEY': SECRET_KEY,
-#     'JWT_GET_USER_SECRET_KEY': None,
-#     'JWT_PUBLIC_KEY': None,
-#     'JWT_PRIVATE_KEY': None,
-#     'JWT_ALGORITHM': 'RS384',
-#     'JWT_VERIFY': True,
-#     'JWT_VERIFY_EXPIRATION': True,
-#     'JWT_LEEWAY': 0,
-#     'JWT_EXPIRATION_DELTA': timedelta(seconds=300),
-#     'JWT_AUDIENCE': None,
-#     'JWT_ISSUER': None,
-
-#     'JWT_ALLOW_REFRESH': False,
-#     'JWT_REFRESH_EXPIRATION_DELTA': timedelta(days=7),
-
-#     'JWT_AUTH_HEADER_PREFIX': 'JWT',
-#     'JWT_AUTH_COOKIE': None,
-
-# }
-############ DJANGO CHANNELS ############
+############# DJANGO CHANNELS ############
 ### couldn't get docker to run for this backend 'channels_redis.core.RedisChannelLayer'
 ASGI_APPLICATION = "django_project.routing.application"
 REDIS_HOST = 'localhost'
@@ -250,76 +217,3 @@ CHANNEL_LAYERS = {
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 
-
-# {CSRF_TRUSTED_ORIGINS 
-# BASE_DIR : "",
-# SECRET_KEY : "",
-# DEBUG : "",
-# ALLOWED_HOSTS : "",
-# INSTALLED_APPS : "",
-# MIDDLEWARE : "",
-# ROOT_URLCONF : "",
-# TEMPLATES : "",
-# WSGI_APPLICATION : "",
-# ASGI_APPLICATION : "",
-# REDIS_HOST : "",
-# REDIS_PORT : "",
-# CHANNEL_LAYERS : "",
-# REDIS_HOST : "",
-# REDIS_PORT: "",
-# DATABASES: "",
-# AUTH_PASSWORD_VALIDATORS : "",
-# LANGUAGE_CODE : "",
-# TIME_ZONE : "",
-#  True: "",
-# True : "",
-# True: "",
-#  True: "",
-# STATIC_URL : "",
-# MEDIA_ROOT : "",
-# MEDIA_URL : "",
-# LOGIN_REDIRECT_URL : "",
-# LOGIN_URL : "",
-# EMAIL_BACKEND : "",
-# DJANGO_HEROKU : "",
-# EMAIL_BACKEND : "",
-# CRISPY_TEMPLATE_PACK : "",
-# CRISPY_CLASS_CONVERTERS : "",
-# REST_FRAMEWORK : ""}
-
-
-# CSRF_TRUSTED_ORIGINS  CSRF_TRUSTED_ORIGINS : "",
-# BASE_DIR =BASE_DIR 
-# SECRET_KEY =SECRET_KEY 
-# DEBUG =DEBUG 
-# ALLOWED_HOSTS =ALLOWED_HOSTS 
-# INSTALLED_APPS =INSTALLED_APPS 
-# MIDDLEWARE =MIDDLEWARE 
-# ROOT_URLCONF =ROOT_URLCONF 
-# TEMPLATES =TEMPLATES 
-# WSGI_APPLICATION =WSGI_APPLICATION 
-# ASGI_APPLICATION =ASGI_APPLICATION 
-# REDIS_HOST =REDIS_HOST 
-# REDIS_PORT =REDIS_PORT 
-# CHANNEL_LAYERS =CHANNEL_LAYERS 
-# REDIS_HOST =REDIS_HOST 
-# REDIS_PORT =REDIS_PORT
-# DATABASES =DATABASES
-# AUTH_PASSWORD_VALIDATORS =AUTH_PASSWORD_VALIDATORS 
-# LANGUAGE_CODE =LANGUAGE_CODE 
-# TIME_ZONE =TIME_ZONE 
-# USE_I18N= True
-# USE_L10N =True 
-# USE_TZ =True
-# CORS_ORIGIN_ALLOW_ALL = True
-# STATIC_URL =STATIC_URL 
-# MEDIA_ROOT =MEDIA_ROOT 
-# MEDIA_URL =MEDIA_URL 
-# LOGIN_REDIRECT_URL =LOGIN_REDIRECT_URL 
-# LOGIN_URL =LOGIN_URL 
-# EMAIL_BACKEND =EMAIL_BACKEND 
-# DJANGO_HEROKU =DJANGO_HEROKU 
-# EMAIL_BACKEND =EMAIL_BACKEND 
-# CRISPY_TEMPLATE_PACK =CRISPY_TEMPLATE_PACK 
-# CRISPY_CLASS_CONVERTERS =CRISPY_CLASS_CONVERTERS 
-# REST_FRAMEWORK =REST_FRAMEWORK 

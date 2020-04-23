@@ -47,8 +47,8 @@ const Profile = props => {
                         {`${city}, ${state}  ${postcode}`}<br />
                     Business Number: {phone}
                     </address>
-                    <a href="#" className="btn btn-primary">Update Picture</a>
-                    <a href="#" className="btn btn-primary">REMOVE PICTURE</a>
+                    <a href="/" className="btn btn-primary">Update Picture</a>
+                    <a href="/" className="btn btn-primary">REMOVE PICTURE</a>
                 </span>
             </div>
             <div id="menu-options" className="card col-sm-6">

@@ -1,29 +1,16 @@
-import React, {useState} from 'react';
-import Select from 'react-select';
- 
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
-];
-const [state, setState] = useState(null)
-const handleChange = selectedOption => {
-    setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption);
-  };
-const GraphSelection = props => {
-  state = {
-    selectedOption: null,
-  };
-    const { selectedOption } = this.state;
-
-    return (
-      <Select
-        value={selectedOption}
-        onChange={handleChange}
-        options={options}
-      />
-    );
-  }
-
-export default GraphSelection
+import React, {useState} from 'react'
+import Select from 'react-select'
+import {MANIAPPREN} from '../data/LicenseeData'
+	
+class GraphSelection extends Select {
+//do not use a constructor method or a super method.
+// it will destroy the inheritance and cause unintended side-effects.
+	render(){
+		console.log(this.state)
+		return(
+		
+		<h1>GRPAH SELECTION</h1>
+		)	
+	}
+}
+export default GraphSelection;
