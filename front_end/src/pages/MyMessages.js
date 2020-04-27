@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
+import React from "react";
 
-export default class MyMessages extends Component {
-    
-    render() {
-        return (
-            <div>
-                THIS PAGE WILL BECOME AVAILABLE IN A FUTURE UPDATE.
-            </div>
-        )
-    }
-}
+const MyMessages = (props) => {
+  return (
+    <div>
+      <h1>
+        <strong> THIS PAGE WILL BECOME AVAILABLE IN A FUTURE UPDATE.</strong>
+      </h1>
+    </div>
+  );
+};
+export default MyMessages;
 /***
 const emailBody = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
