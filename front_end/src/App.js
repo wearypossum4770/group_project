@@ -10,10 +10,11 @@ import MyDocs from './pages/MyDocs'
 import Signup from './pages/Signup'
 import LoginLogoutPage from './pages/LoginLogoutPage'
 import Dashboard from './pages/Dashboard'
-import BlogPosts from './pages/BlogPosts'
+
 import Profile from './pages/Profile'
 import FAQPage from './pages/FAQPage'
 import {MonthlyTimeSheet,WeeklyTimeSheet} from './userforms/TimeSheets'
+
 
 class App extends React.Component {
 	render() {
@@ -24,7 +25,6 @@ class App extends React.Component {
 				<Router>
 					<Switch>
 						{/* <MyContext.Provider value ={UserContext}> */}
-							<Route exact path="/posts" component={BlogPosts} />
 							<Route exact path='/home' component={LandingPage} />
 							<Route path="/authenticate" component={Authentication} />
 							{/* <ProtectedRoutes exact

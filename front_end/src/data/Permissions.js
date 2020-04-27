@@ -44,7 +44,7 @@ export const permissions = {
 		},
 	}	
 	
-export webDevSimplified =  { 
+export const  webDevSimplified =  { 
 	ROLE:ROLE,
 	users: [
     { id: 1, name: 'Kyle', role: ROLE.ADMIN },
