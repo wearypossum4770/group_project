@@ -6,11 +6,11 @@ from django.db.models import (
     ForeignKey,
     CASCADE,
 )
+from django.conf import settings
 from django.utils import timezone
 from django.urls import reverse
 from django.contrib.auth.models import User
 # Create your models here.
-
 
 class Post(Model):
     title = CharField(max_length=50)

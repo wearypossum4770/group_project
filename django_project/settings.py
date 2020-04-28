@@ -28,7 +28,6 @@ CSRF_TRUSTED_ORIGINS = ['http://localhost','127.0.0.1','http://localhost:3000','
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -37,8 +36,14 @@ SECRET_KEY = '9$tfgzgbxbr_b%e^2+txd98!_^0i&4^+ai33v2ey@(7s%4-r!s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://localhost','127.0.0.1']
+ALLOWED_HOSTS = ['http://localhost','192.168.86.149','127.0.0.1']
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_VERIFICATION_METHOD = 'username'
 
+REST_AUTH_REGISTRATION_SERIALIZERS = {
+    'REGISTER_SERIALIZER':""
+}
 
 # Application definition
 
@@ -47,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
@@ -54,13 +60,17 @@ INSTALLED_APPS = [
     ######### MY APPS ##########
     'blog.apps.BlogConfig',
 	'users.apps.UsersConfig',
+    'api.apps.ApiConfig',
     #'user_chats.apps.UserChatsConfig',
     'django_restframework',
     'corsheaders',
   #  'knox',
+    'allauth',
+    'allauth.account',
     'rest_auth',
-    'rest_framework',
+    'rest_auth.registration',
     'rest_framework.authtoken',
+    'rest_framework',
     'rest_framework_api_key',
     ######### CHANNELS / PUSH NOTIFICATIONS ##########
     'channels', 
@@ -75,6 +85,10 @@ INSTALLED_APPS = [
     # 'stronghold',
 
 ]
+SITE_ID = 1
+
+REST_USE_JWT =True
+
 
 MIDDLEWARE = [
     
