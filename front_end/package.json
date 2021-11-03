@@ -80,7 +80,7 @@
     "typeface-roboto": "^0.0.75",
     "typescript": "^3.8.3",
     "uuid": "^7.0.3",
-    "validator": "^13.0.0",
+    "validator": "^13.7.0",
     "vhtml": "^2.2.0",
     "xpkg": "^0.2.3",
     "yarn": "^1.22.4"
